@@ -3,9 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glass Class Prediction</title>
+    <title>Glass Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #e3f2fd; 
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: none; /* Hide labels */
+        }
+
+        input[type="text"] {
+            width: calc(100% - 20px); 
+            padding: 10px;
+            border: 1px solid #f0bebe;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            display: block; /* Make input elements block-level */
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4caf50; 
+            color: #fcfafa;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049; 
+        }
+
+        input[type="text"]:hover,
+        input[type="text"]:focus {
+            border-color: #4caf50;
+            outline: none;
+        }
+        body {
+        background-image: url('https://img.freepik.com/premium-photo/beautiful-design-template-with-glass-light-blue-band-soft-blue-background-light-backdrop-neon-blue-light-abstract-design-element-ai-illustration-design_155807-7753.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+}
+
+
+    </style>
 </head>
 <body>
+    <div class="container">
     <h1>Glass Class Prediction</h1>
     <form action="/predict" method="post">
         <label for="RI">RI:</label>
@@ -26,7 +96,8 @@
         <input type="text" id="Ba" name="Ba" required><br><br>
         <label for="Fe">Fe:</label>
         <input type="text" id="Fe" name="Fe" required><br><br>
-        <input type="submit" value="Predict">
+        <button type="submit" value="Predict">SUBMIT</button>
     </form>
+    </div>
 </body>
 </html>
