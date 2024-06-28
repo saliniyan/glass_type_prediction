@@ -19,22 +19,25 @@ This repository contains a machine learning project for predicting the type of g
    ```bash
    git clone https://github.com/saliniyan/glass_type_prediction.git
    cd glass_type_prediction
-```
+   ```
+   
 Create a virtual environment and activate it:
 ```bash
 python3 -m venv venv
-source venv/bin/activate```
+source venv/bin/activate
+```
 
 Install the required dependencies:
 ```bash
-
-pip install -r requirements.txt```
+pip install -r requirements.txt
+```
 
 Usage
 Run the Flask application:
 ```bash
 
-python app.py```
+python app.py
+```
 
 Open your web browser and go to http://127.0.0.1:5000/ to access the application.
 Upload the glass dataset and get predictions for the glass type.
