@@ -58,13 +58,13 @@ Headlamps
 
 ## Screenshots
 
-### Login Page
+### Accuracy
 ![Accuracy](images/Accuracy.png)
 
-### Home page
+### Form page
 ![Form page](images/Form.png)
 
-### Booking Page
+### Predicticed output page
 ![Predicticed output page](images/output.png)
 
 
