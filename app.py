@@ -26,8 +26,19 @@ def predict():
         predicted_class_index = raw_predictions.argmax(axis=1)[0]
         
         predicted_class = predicted_class_index + 1  # Adding 1 to match original class labels
+
+        glass_classes = [
+        "Building Windows (Float Processed)", "Used for windows in buildings",
+        "Building Windows (Non-Float Processed)", "Used for windows in buildings",
+        "Vehicle Windows (Float Processed)", "Used for windows in vehicles",
+        "Vehicle Windows (Non-Float Processed)", "Used for windows in vehicles",
+        "Containers", "Used for making containers",
+        "Tableware", "Used for making tableware",
+        "Headlamps", "Used for making headlamps",
+        ]
+        use_case= glass_classes[predicted_class]
         
-        return render_template('result.html', predicted_class=predicted_class)
+        return render_template('result.html', predicted_class=predicted_class, use_case=use_case)
 
 if __name__ == '__main__':
     app.run(debug=True)
