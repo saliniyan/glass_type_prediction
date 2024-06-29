@@ -6,98 +6,116 @@
     <title>Glass Details</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f7f7f7;
             margin: 0;
-            padding: 0;
+            width: 100vw;
+            height: 100vh;
+            background: #ecf0f3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Poppins', sans-serif;
+            background-image: url('https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdjEwMTYtYy0wNi1rc2g2bXZ2bi5qcGc.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
         }
 
         .container {
-            max-width: 600px;
-            margin: 50px auto;
-            padding: 20px;
-            background-color: #e3f2fd; 
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-        }
-
-        h2 {
+            position: relative;
+            width: 32%;
+            height: auto;
+            border-radius: 20px;
+            padding: 40px;
+            box-sizing: border-box;
+            background: rgba(255, 255, 255, 0.9);  
             text-align: center;
-            color: #333;
         }
 
-        form {
-            margin-top: 20px;
+        .inputs {
+            text-align: left;
+            margin-top: 30px;
+        }
+
+        label, input, button {
+            display: block;
+            width: 100%;
+            padding: 0;
+            border: none;
+            outline: none;
+            box-sizing: border-box;
         }
 
         label {
-            display: none; /* Hide labels */
+            margin-bottom: 4px;
         }
 
-        input[type="text"] {
-            width: calc(100% - 20px); 
-            padding: 10px;
-            border: 1px solid #f0bebe;
-            border-radius: 5px;
-            margin-bottom: 10px;
-            box-sizing: border-box;
-            display: block; /* Make input elements block-level */
+        label + input {
+            margin-top: 12px;
+        }
+
+        input::placeholder {
+            color: gray;
+        }
+
+        input {
+            background: #ecf0f3;
+            padding: 10px 20px;
+            height: 50px;
+            font-size: 14px;
+            border-radius: 50px;
+            box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+            transition: box-shadow 0.3s;
+        }
+
+        input:focus {
+            box-shadow: inset 0 0 5px 2px #a5a6e2;
         }
 
         button {
-            width: 100%;
-            padding: 10px;
-            background-color: #4caf50; 
-            color: #fcfafa;
-            border: none;
-            border-radius: 5px;
+            color: white;
+            margin-top: 20px;
+            background: #1DA1F2;
+            height: 40px;
+            border-radius: 20px;
             cursor: pointer;
-            transition: background-color 0.3s ease;
+            font-weight: 900;
+            box-shadow: 6px 6px 6px #cbced1, -6px -6px 6px white;
+            transition: box-shadow 0.5s;
         }
 
         button:hover {
-            background-color: #45a049; 
+            box-shadow: none;
         }
-
-        input[type="text"]:hover,
-        input[type="text"]:focus {
-            border-color: #4caf50;
-            outline: none;
-        }
-        body {
-        background-image: url('https://img.freepik.com/premium-photo/beautiful-design-template-with-glass-light-blue-band-soft-blue-background-light-backdrop-neon-blue-light-abstract-design-element-ai-illustration-design_155807-7753.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-}
-
 
     </style>
 </head>
 <body>
     <div class="container">
-    <h1>Glass Class Prediction</h1>
-    <form action="/predict" method="post">
-        Enter value of RI :
-        <input type="text" id="RI" name="RI" required><br><br>
-        Enter value of Na :
-        <input type="text" id="Na" name="Na" required><br><br>
-        Enter value of Mg :
-        <input type="text" id="Mg" name="Mg" required><br><br>
-        Enter value of Al :
-        <input type="text" id="Al" name="Al" required><br><br>
-        Enter value of Si :
-        <input type="text" id="Si" name="Si" required><br><br>
-        Enter value of K :
-        <input type="text" id="K" name="K" required><br><br>
-        Enter value of Ca :
-        <input type="text" id="Ca" name="Ca" required><br><br>
-        Enter value of Ba :
-        <input type="text" id="Ba" name="Ba" required><br><br>
-        Enter value of Fe :
-        <input type="text" id="Fe" name="Fe" required><br><br>
-        <button type="submit" value="Predict">SUBMIT</button>
-    </form>
+        <h1>Glass Class Prediction</h1>
+        <form action="/predict" method="post">
+            <div class="inputs">
+                <label for="RI">Enter value of RI :</label>
+                <input type="text" id="RI" name="RI" required>
+                <label for="Na">Enter value of Na :</label>
+                <input type="text" id="Na" name="Na" required>
+                <label for="Mg">Enter value of Mg :</label>
+                <input type="text" id="Mg" name="Mg" required>
+                <label for="Al">Enter value of Al :</label>
+                <input type="text" id="Al" name="Al" required>
+                <label for="Si">Enter value of Si :</label>
+                <input type="text" id="Si" name="Si" required>
+                <label for="K">Enter value of K :</label>
+                <input type="text" id="K" name="K" required>
+                <label for="Ca">Enter value of Ca :</label>
+                <input type="text" id="Ca" name="Ca" required>
+                <label for="Ba">Enter value of Ba :</label>
+                <input type="text" id="Ba" name="Ba" required>
+                <label for="Fe">Enter value of Fe :</label>
+                <input type="text" id="Fe" name="Fe" required>
+                <br>
+                <button type="submit" value="Predict">SUBMIT</button>
+            </div>
+        </form>
     </div>
 </body>
 </html>
