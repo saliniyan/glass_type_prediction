@@ -5,6 +5,7 @@ from sklearn.preprocessing import StandardScaler, LabelEncoder
 from sklearn.metrics import accuracy_score
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, SimpleRNN
+import joblib
 
 # Load and preprocess the dataset
 df1 = pd.read_csv("glass.csv")
@@ -45,3 +46,6 @@ print(f"Training Accuracy: {train_accuracy}")
 test_loss, test_accuracy = model.evaluate(X_test_reshaped, y_test)
 print(f"Test Accuracy: {test_accuracy}")
 model.save('rnn_model.keras')
+scaler = StandardScaler()
+scaler.fit(x_data)
+joblib.dump(scaler, 'scaler.joblib')
