@@ -1,7 +1,7 @@
 # Glass Type Prediction
 
 This repository contains a machine learning project for predicting the type of glass based on its chemical composition. The project uses various machine learning algorithms to classify glass into different categories.
-After identifing the optimal model this project finally uses the RNN model with the accuracy of 0.923
+After identifing the optimal model this project finally uses the RNN model with the training accuracy of 0.91 and testing of 0.7483
 
 ## Project Structure
 
