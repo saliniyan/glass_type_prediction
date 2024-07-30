@@ -1,7 +1,7 @@
 Flask==3.0.3
-Jinja2==3.1.4
-joblib==1.4.2
-keras==3.3.3
+Jinja2==3.x
+joblib==1.x
+keras==3.x
 numpy==1.26.4
 pandas==2.2.2
 requests==2.32.3
