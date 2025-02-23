@@ -1,7 +1,7 @@
 # Glass Type Prediction
 
 This repository contains a machine learning project for predicting the type of glass based on its chemical composition. The project uses various machine learning algorithms to classify glass into different categories.
-After identifing the optimal model this project finally uses the RNN model with the training accuracy of 0.91 and testing of 0.7483
+After identifing the optimal model this project finally uses the RNN model with the training accuracy of 0.91 .
 
 ## Project Structure
 
@@ -14,37 +14,8 @@ After identifing the optimal model this project finally uses the RNN model with 
 - **requirements.txt**: Lists the dependencies required for the project.
 - **rnn_model.keras**: Saved Keras model for glass type prediction.
 
-## Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/saliniyan/glass_type_prediction.git
-   cd glass_type_prediction
-   ```
-   
-Create a virtual environment and activate it:
-```bash
-python3 -m venv venv
-source venv/bin/activate
-```
-
-Install the required dependencies:
-```bash
-pip install -r requirements.txt
-```
-
-Usage
-Run the Flask application:
-```bash
-
-python app.py
-```
-
-Open your web browser and go to http://127.0.0.1:5000/ to access the application.
-Upload the glass dataset and get predictions for the glass type.
-
 ## Algorithms Used
-The project explores various machine learning algorithms to find the best model for glass type prediction. Details and performance of these algorithms are documented in the TestingWithAlgorithms.ipynb notebook.
+The project explores various machine learning algorithms such as KNN, Naive Bayes, CNN, RNN ect,.. to find the best model for glass type prediction. Details and performance of these algorithms are documented in the TestingWithAlgorithms.ipynb notebook.
 
 ## Dataset
 The dataset (glass.csv) contains chemical composition data of glass samples. The target variable is the type of glass, which is classified into the following categories:
