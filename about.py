@@ -43,8 +43,6 @@ y_train_pred_classes = np.argmax(y_train_pred, axis=1)
 train_accuracy = accuracy_score(y_train, y_train_pred_classes)
 print(f"Training Accuracy: {train_accuracy}")
 
-test_loss, test_accuracy = model.evaluate(X_test_reshaped, y_test)
-print(f"Test Accuracy: {test_accuracy}")
 model.save('rnn_model.keras')
 scaler = StandardScaler()
 scaler.fit(x_data)
